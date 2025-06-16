@@ -5,7 +5,7 @@ Requirements
 ------------
 
 * Python 3.8+
-* R 4.0+ (for DESeq2)
+* R 4.0+ (for limma)
 * Required Python packages (see requirements.txt)
 
 Quick Install
@@ -15,7 +15,7 @@ Quick Install
 
    .. code-block:: bash
 
-      git clone [your-repo-url]
+      git clone https://github.com/MoothaLab/omics_downstream_pipeline.git
       cd omics_downstream_pipeline
 
 2. **Install dependencies**
