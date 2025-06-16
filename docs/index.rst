@@ -1,8 +1,8 @@
 Omics Downstream Pipeline Documentation
 ======================================
 
-.. image:: pipeline_overview.png
-   :alt: Pipeline Overview
+.. image:: Dual_Omics.png
+   :alt: Pipeline Logo
    :align: center
    :width: 600px
 
