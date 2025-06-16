@@ -71,13 +71,13 @@ Preprocessing Parameters
     Subset anndata object used for downstream differential expression analysis to only contain specified transcript types. If "all_transcripts", do not subset anndata (default ['protein_coding', 'lncRNA'])
 
 ``--mean_threshold_for_expressed_genes MEAN_THRESHOLD_FOR_EXPRESSED_GENES``
-    Threshold for mean gene levels used for identification of expressed vs not expressed genes.(default: 1.25)
+     Threshold for mean gene levels used for identification of expressed vs not expressed genes. Also used as maximum mean gene-level threshold for identification of highly variable genes (default: 1.25)
 
 ``--max_mean MAX_MEAN``
-    Maximum mean expression threshold for filtering highly variable genes (default: 8)
+    Maximum mean expression threshold for identification of highly variable genes (default: 8)
 
 ``--min_disp MIN_DISP``
-    Minimum dispersion threshold for filtering highly variable genes (default: 1)
+    Minimum dispersion threshold for identification of highly variable genes (default: 1)
 
 ``--apply_sum_norm``
     Flag to apply per sample sum normalization on raw counts of data. Adds layer with normalized data to anndata object (default: False)
