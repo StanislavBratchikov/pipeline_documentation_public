@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 project = 'Omics Downstream Pipeline'
-copyright = '2025, Your Name'
-author = 'Your Name'
+copyright = '2025, Stanislav Bratchikov'
+author = 'Stanislav Bratchikov'
 release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
