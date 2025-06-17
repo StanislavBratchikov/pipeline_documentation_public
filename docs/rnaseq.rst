@@ -65,7 +65,7 @@ Preprocessing Parameters
     Path to the MitoCarta data. "MitoCarta3.0_MitoPathways" column must contain OXPHOS complexes names in the format shown in defaults (default: ../DE_pipelines/../ref_files/human/human_genes_mitocarta3.0.csv.gz)
 
 ``--lncRNAs_and_prot_coding_genes_path LNCRNAS_AND_PROT_CODING_GENES_PATH``
-    Path to file mapping EnsemblID to long non coding RNAs and protein coding transcripts. This mapping will be used for subsetting count data to only contain specified category of transcripts. Used in pair with ``transcript_types`` flag (default: ../DE_pipelines/../ref_files/human/lncRNAs_and_prot_coding_genes.csv.gz)
+    Path to file mapping EnsemblID to long non coding RNAs and protein coding transcripts. This mapping will be used for subsetting count data to only contain specified category of transcripts. Used in pair with ``--transcript_types`` flag (default: ../DE_pipelines/../ref_files/human/lncRNAs_and_prot_coding_genes.csv.gz)
 
 ``--transcript_types TRANSCRIPT_TYPES [TRANSCRIPT_TYPES ...]``
     Subset anndata object used for downstream differential expression analysis to only contain specified transcript types. If ``all_transcripts``, do not subset anndata (default ['protein_coding', 'lncRNA'])
@@ -83,7 +83,7 @@ Preprocessing Parameters
     Flag to apply per sample sum normalization on raw counts of data. Adds layer with normalized data to anndata object (default: False)
 
 ``--target_sum TARGET_SUM``
-    Target sum per sample. Used if ``apply_sum_norm`` is specified (default: 10000000.0)
+    Target sum per sample. Used if ``--apply_sum_norm`` is specified (default: 10000000.0)
 
 ``--scale_max_value SCALE_MAX_VALUE``
     Maximum scaling value to use for sc.pp.scale function applied to normalized data. This layer will be used for PCA plots (default: 10)
@@ -140,10 +140,10 @@ Enrichment Analysis Parameters
     Directory containing enrichment analysis databases (.gmt files) (default ../DE_pipelines/../ref_files/human/human_enrichr_databases/)
 
 ``--logfc_enrich LOGFC_ENRICH``
-    Log2 fold change threshold for enrichment analysis. If not specified, ``logfc_threshold`` value is used (default: value passed to logfc_threshold)
+    Log2 fold change threshold for enrichment analysis. If not specified, ``--logfc_threshold`` value is used (default: value passed to logfc_threshold)
 
 ``--pval_enrich PVAL_ENRICH``
-    P-value threshold for enrichment analysis. If not specified, ``pval_threshold`` value is used (default: value passed to pval_threshold)
+    P-value threshold for enrichment analysis. If not specified, ``--pval_threshold`` value is used (default: value passed to pval_threshold)
 
 ``--pval_enrich_column {padj,pvalue}``
     P-value column to use for enrichment analysis either ``padj`` or ``pvalue`` (default: padj)
