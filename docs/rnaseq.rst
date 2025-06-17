@@ -47,10 +47,10 @@ Preprocessing Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 ``--feature_counts_pattern FEATURE_COUNTS_PATTERN``
-    Glob pattern to match feature count files with Geneid column containing EnsemblIDs. Files are expected to be stored in directories named the same as corresponding samples in the passed sample metadata.
+    Glob pattern to match feature count files with ``Geneid`` column containing EnsemblIDs. Files are expected to be stored in directories named the same as corresponding samples in the passed sample metadata.
 
 ``--sample_metadata_path SAMPLE_METADATA_PATH``
-    Path to the sample metadata file. Pipeline will use this table as sample metadata table in anndata object. All sample related data such as biological conditions, annotation for PCA and batch information should be contained here. Column "RNA-seq Ref" must contain sample ids.
+    Path to the sample metadata file. Pipeline will use this table as sample metadata table in anndata object. All sample related data such as biological conditions, annotation for PCA and batch information should be contained here. Column ``RNA-seq Ref`` must contain sample ids.
 
 ``--preprocessing_output_dir PREPROCESSING_OUTPUT_DIR``
     Directory where preprocessing results will be saved
@@ -65,10 +65,10 @@ Preprocessing Parameters
     Path to the MitoCarta data. "MitoCarta3.0_MitoPathways" column must contain OXPHOS complexes names in the format shown in defaults (default: ../DE_pipelines/../ref_files/human/human_genes_mitocarta3.0.csv.gz)
 
 ``--lncRNAs_and_prot_coding_genes_path LNCRNAS_AND_PROT_CODING_GENES_PATH``
-    Path to file mapping EnsemblID to long non coding RNAs and protein coding transcripts. This mapping will be used for subsetting count data to only contain specified category of transcripts. Used in pair with transcript_types flag (default: ../DE_pipelines/../ref_files/human/lncRNAs_and_prot_coding_genes.csv.gz)
+    Path to file mapping EnsemblID to long non coding RNAs and protein coding transcripts. This mapping will be used for subsetting count data to only contain specified category of transcripts. Used in pair with ``transcript_types`` flag (default: ../DE_pipelines/../ref_files/human/lncRNAs_and_prot_coding_genes.csv.gz)
 
 ``--transcript_types TRANSCRIPT_TYPES [TRANSCRIPT_TYPES ...]``
-    Subset anndata object used for downstream differential expression analysis to only contain specified transcript types. If "all_transcripts", do not subset anndata (default ['protein_coding', 'lncRNA'])
+    Subset anndata object used for downstream differential expression analysis to only contain specified transcript types. If ``all_transcripts``, do not subset anndata (default ['protein_coding', 'lncRNA'])
 
 ``--mean_threshold_for_expressed_genes MEAN_THRESHOLD_FOR_EXPRESSED_GENES``
      Threshold for mean gene levels used for identification of expressed vs not expressed genes. Also used as maximum mean gene-level threshold for identification of highly variable genes (default: 1.25)
@@ -83,7 +83,7 @@ Preprocessing Parameters
     Flag to apply per sample sum normalization on raw counts of data. Adds layer with normalized data to anndata object (default: False)
 
 ``--target_sum TARGET_SUM``
-    Target sum per sample. Used if apply_sum_norm is specified (default: 10000000.0)
+    Target sum per sample. Used if ``apply_sum_norm`` is specified (default: 10000000.0)
 
 ``--scale_max_value SCALE_MAX_VALUE``
     Maximum scaling value to use for sc.pp.scale function applied to normalized data. This layer will be used for PCA plots (default: 10)
@@ -140,13 +140,13 @@ Enrichment Analysis Parameters
     Directory containing enrichment analysis databases (.gmt files) (default ../DE_pipelines/../ref_files/human/human_enrichr_databases/)
 
 ``--logfc_enrich LOGFC_ENRICH``
-    Log2 fold change threshold for enrichment analysis. If not specified, logfc_threshold value is used (default: value passed to logfc_threshold)
+    Log2 fold change threshold for enrichment analysis. If not specified, ``logfc_threshold`` value is used (default: value passed to logfc_threshold)
 
 ``--pval_enrich PVAL_ENRICH``
-    P-value threshold for enrichment analysis. If not specified, pval_threshold value is used (default: value passed to pval_threshold)
+    P-value threshold for enrichment analysis. If not specified, ``pval_threshold`` value is used (default: value passed to pval_threshold)
 
 ``--pval_enrich_column {padj,pvalue}``
-    P-value column to use for enrichment analysis either "padj" or "pvalue" (default: "padj")
+    P-value column to use for enrichment analysis either ``padj`` or ``pvalue`` (default: padj)
 
 ``--min_size MIN_SIZE``
     min_size parameter for gseapy.prerank function (default: 15)

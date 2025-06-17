@@ -62,10 +62,10 @@ Preprocessing Parameters
     Path to the expression data file. The file must include a "ProteinID" column containing protein identifiers and additional columns for each sample, where rows represent protein expression levels.
 
 ``--protein_metadata_path PROTEIN_METADATA_PATH``
-    Path to the protein metadata file. The file must include ProteinID column same as in expression data file. "GeneSymbol" should contain corresponding gene names for each protein. "Peptides" column with number of unique peptides used for detection should be present in the file, if peptide normalization is requested. If user wants to identify canonical isoforms using UniParc,"Sequence" column must be present. Rows must contain information on peptides used for detection of a given protein in following format. Ex. ("{{'Peptide_A','Peptide_B'}}")
+    Path to the protein metadata file. The file must include ProteinID column same as in expression data file. ``GeneSymbol`` should contain corresponding gene names for each protein. ``Peptides`` column with number of unique peptides used for detection should be present in the file, if peptide normalization is requested. If user wants to identify canonical isoforms using UniParc,``Sequence`` column must be present. Rows must contain information on peptides used for detection of a given protein in following format. Ex. ("{{'Peptide_A','Peptide_B'}}")
 
 ``--sample_metadata_path SAMPLE_METADATA_PATH``
-    Path to the sample metadata file. The file must include "TMT ID" column specifying sample names.
+    Path to the sample metadata file. The file must include ``TMT ID`` column specifying sample names.
 
 ``--preprocessing_output_dir PREPROCESSING_OUTPUT_DIR``
     Directory where preprocessing results will be saved
@@ -104,19 +104,19 @@ Preprocessing Parameters
     Flag to skip Median Absolute Deviation normalization of the data (default: False)
 
 ``--batch_correct``
-    Flag whether to perform batch correction. If specified, column specified in batch_id_column argument will be used for batch correction using Combat package. Input layer for correction is dependent on normalization -related flags skip_sum_normalize, skip_peptide_normalize, skip_mad_normalization. Most normalized layer is used for correction. (default: False)
+    Flag whether to perform batch correction. If specified, column specified in batch_id_column argument will be used for batch correction using Combat package. Input layer for correction is dependent on normalization -related flags ``skip_sum_normalize``, ``skip_peptide_normalize``, ``skip_mad_normalization``. Most normalized layer is used for correction. (default: False)
 
 ``--batch_id_column BATCH_ID_COLUMN``
     Batch information column in anndata_obj.obs that will be used for correction. Batches in column should be numerically encoded with integers. Used if batch_correct is True (default: None)
 
 ``--mod_id_column MOD_ID_COLUMN``
-    Column name in sample metadata for outcome of interest and other covariates besides batch. Used to create model matrix to preserve biological variation during correction. Used if batch_correct is True.(default: None)
+    Column name in sample metadata for outcome of interest and other covariates besides batch. Used to create model matrix to preserve biological variation during correction. Used if ``batch_correct`` is True.(default: None)
 
 ``--identify_canonical_proteins``
-    Flag to identify canonical protein isoforms. If True, swiss_prot_ref_path should be specified (default: False)
+    Flag to identify canonical protein isoforms. If True, ``swiss_prot_ref_path`` should be specified (default: False)
 
 ``--apply_uniparc_mapping``
-    Use UniParc database for the most up-to-date ProteinID. uniparc_db_path should be specified (default: False)
+    Use UniParc database for the most up-to-date ProteinID. ``uniparc_db_path`` should be specified (default: False)
 
 ``--species SPECIES``
     Organism (used for mapping canonical isoforms with UniParc) (default: Homo sapiens)
@@ -182,13 +182,13 @@ Enrichment Analysis Parameters
     Directory containing enrichment analysis databases (.gmt files) (default ../DE_pipelines/../ref_files/human/human_enrichr_databases/)
 
 ``--logfc_enrich LOGFC_ENRICH``
-    Log2 fold change threshold for enrichment analysis. If not specified, logfc_threshold value is used (default: value passed to logfc_threshold)
+    Log2 fold change threshold for enrichment analysis. If not specified, ``logfc_threshold`` value is used (default: value passed to logfc_threshold)
 
 ``--pval_enrich PVAL_ENRICH``
-    P-value threshold for enrichment analysis. If not specified, pval_threshold value is used (default: value passed to pval_threshold)
+    P-value threshold for enrichment analysis. If not specified, ``pval_threshold`` value is used (default: value passed to pval_threshold)
 
 ``--pval_enrich_column {adj.P.Val,P.Value}``
-    P-value column to use for enrichment analysis either "adj.P.Val" or "P.Value" (default: "adj.P.Val")
+    P-value column to use for enrichment analysis either ``adj.P.Val`` or ``P.Value`` (default: adj.P.Val)
 
 ``--min_size MIN_SIZE``
     Minimum allowed number of genes from gene set that are also in the dataset in gseapy.prerank function (default: 15)
