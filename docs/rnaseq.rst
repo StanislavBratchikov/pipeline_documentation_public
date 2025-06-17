@@ -50,7 +50,7 @@ Preprocessing Parameters
     Glob pattern to match feature count files with Geneid column containing EnsemblIDs. Files are expected to be stored in directories named the same as corresponding samples in the passed sample metadata.
 
 ``--sample_metadata_path SAMPLE_METADATA_PATH``
-    Path to the sample metadata file. Pipeline will use this table as sample metadata table in anndata object. All sample related data such as biological conditions, annotation for PCA and batch information should be contained here. Column "RNA-seq Ref" must be contained sample ids.
+    Path to the sample metadata file. Pipeline will use this table as sample metadata table in anndata object. All sample related data such as biological conditions, annotation for PCA and batch information should be contained here. Column "RNA-seq Ref" must contain sample ids.
 
 ``--preprocessing_output_dir PREPROCESSING_OUTPUT_DIR``
     Directory where preprocessing results will be saved
